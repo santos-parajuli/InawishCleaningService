@@ -1,0 +1,91 @@
+<!-- Axay Nayi 8848852 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LOGIN | INAWISH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./CSS/stylesheet.css">
+</head>
+
+<body>
+    <nav class="navWrapper">
+        <div class="navBar">
+            <div class="logo">
+                <span>INAWISH</span>
+            </div>
+            <div class="hamburger">
+                <img id="toggleMenu" src="./images/Hamburger.png" alt="Menu" />
+            </div>
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="./about.html">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="./services.html">
+                        Services
+                    </a>
+                </li>
+                <li>
+                    <a href="./contact.html">
+                        Contact
+                    </a>
+                </li>
+                <li>
+                    <a class="selected"  href="./login.html">
+                        Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobileLinks">
+            <a href="./index.html">
+                <div class="selected">Home</div>
+            </a>
+            <a href="./about.html">
+                <div>About</div>
+            </a>
+            <a href="./services.html">
+                <div>Services</div>
+            </a>
+            <a href="./contact.html">
+                <div>Contact</div>
+            </a>
+            <a href="./login.html">
+                <div>Login</div>
+            </a>
+        </div>
+    </nav>
+    <div class="login-maindiv">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">LogIn</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <form id="login" class="input-group">
+                <input type="email" class="input-field" placeholder="Email Id" required>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Log in</button>
+            </form>
+            <form id="register" class="input-group">
+                <input type="email" class="input-field" placeholder="Email Id" required>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="password" class="input-field" placeholder="Confirm Password" required>
+                <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

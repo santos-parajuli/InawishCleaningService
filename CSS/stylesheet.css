@@ -1,0 +1,775 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Share+Tech+Mono&display=swap&family=Redressed');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    z-index: 100;
+}
+
+.navWrapper {
+    display: flex;
+    position: sticky;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.7);
+    flex-wrap: wrap;
+    padding: 10px;
+    font-size: large;
+    align-items: center;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2em;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+
+.logo>span {
+    font-family: "Redressed";
+    font-size: 1.5em;
+    padding: 5px;
+}
+
+.hamburger {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li {
+    width: 100px;
+    list-style: none;
+    margin-left: 10px;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+.selected {
+    color: #005590;
+}
+
+nav ul li:hover {
+    color: #005590;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+.mobileLinks {
+    display: none;
+}
+
+.banner {
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+.banner h3,
+h2 {
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.banner h3 {
+    font-family: "Redressed";
+    font-size: 1.5rem;
+}
+
+.banner h2 {
+    font-family: 'Roboto', monospace;
+    font-size: 2.5rem;
+}
+
+.banner1 {
+    background-image: url("../images/Home_banner.png");
+}
+
+.banner2 {
+    background-image: url("../images/Contact_banner.png");
+}
+
+.banner3 {
+    background-image: url("../images/Services_Banner.png");
+}
+
+.banner4 {
+    background-image: url("../images/About_banner.png");
+}
+
+.button-home-page {
+    padding: .8rem 3rem;
+    border-radius: 25px;
+    border: solid white 1px;
+    background-color: transparent;
+    font-size: 1rem;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.button-home-page:hover {
+    background-color: #0054904b;
+    border: solid transparent 1px;
+}
+
+.blue {
+    border: solid #0054908e 1px;
+    color: #005590;
+    padding: .5rem 2rem;
+    margin-top: 1rem;
+}
+
+.homepageServices {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.underline {
+    font-size: 2rem;
+    padding: 5px 10px;
+    background-image: linear-gradient(120deg, #8fd3f4 0%, #005590 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+}
+
+.underline:hover {
+    background-size: 100% 88%;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    padding: 2rem;
+}
+
+.serviceCard {
+    border: solid rgb(236, 236, 236) 1px;
+    width: 100%;
+    padding: 2rem 0;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.137);
+    font-family: "Roboto", monospace;
+}
+
+.serviceCard:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.serviceCard>img {
+    height: 150px;
+    width: 150px;
+}
+
+.serviceCard>p {
+    line-height: 1.5rem;
+    color: #030303cb;
+}
+
+h4 {
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    color: #01111ca1;
+}
+
+.whyUsImage {
+    background-image: url("../images/whyusimage.png");
+    height: 500px;
+    width: 400px;
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+}
+
+.joinUsImage {
+    background-image: url("../images/join-our-team.png");
+    height: 500px;
+    width: 100%;
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+}
+
+.whyUs {
+    padding: 2rem;
+    flex: 50%;
+    text-align: left;
+    height: fit-content;
+    min-height: 400px;
+}
+
+p {
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.whyUs>h5 {
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.61);
+    font-weight: 600;
+    line-height: 2rem;
+    padding-top: 1rem;
+}
+
+.carousel {
+    max-width: 100%;
+    position: relative;
+}
+
+/* Hide the images by default */
+.slides {
+    display: none;
+    width: 100%;
+}
+
+.prev,
+.next {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    padding: 20px;
+    height: 100%;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.testimonials {
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.testimonialText {
+    width: 50%;
+    text-align: left;
+}
+
+.userImage>img {
+    height: 200px;
+    width: 200px;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+footer {
+    background-color: #00549033;
+}
+
+.copyright {
+    border-top: solid 1px rgba(0, 0, 0, 0.377);
+    text-align: center;
+    padding: 20px;
+}
+
+.copyright>span {
+    font-family: Roboto, monospace;
+    font-size: 1.2rem;
+}
+
+footer h3 {
+    line-height: 2rem;
+    color: #04034b;
+}
+
+footer p {
+    line-height: 1.7rem;
+    color: #04034bd7;
+}
+
+.full-Width-P {
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+
+.our-service {
+    width: 90%;
+    margin: auto;
+    font-family: "Roboto", monospace;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.our-service>div>p {
+    margin-top: 1rem;
+}
+
+.our-service>img {
+    width: 256px;
+    height: 256px;
+    margin: 2rem 5rem 2rem 5rem;
+}
+
+.our-service-content-right {
+    padding: 2rem;
+    text-align: right;
+}
+
+.our-service-content-left {
+    padding: 2rem;
+    text-align: left;
+}
+
+.width90 {
+    width: 90%;
+    margin: auto;
+}
+
+table {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+thead {
+    color: #707070;
+    border-bottom: 2px solid #0C4BCC;
+}
+
+th {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+}
+
+th,
+td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+td {
+    font-size: 1.2rem;
+    padding-top: 1.05rem;
+    padding-bottom: 1.05rem;
+}
+
+tr:nth-child(even) {
+    background-color: #F7F8FC;
+}
+
+.flexRow-reverse {
+    flex-direction: row-reverse;
+}
+
+.login-maindiv {
+    height: 92%;
+    width: 100%;
+    background-image: url(../images/lady-cleaning-house.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.form-box {
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.button-box {
+    display: flex;
+    width: 212px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    color: #000;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, #678ed0, #4e58e7);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group {
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #678ed0, #4e58e7);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box {
+    margin: 30px 10px 30px 0;
+}
+
+.black-color {
+    color: #000;
+}
+
+#login {
+    left: 50px;
+}
+
+#register {
+    left: 450px;
+}
+
+.wrapper h1 {
+    color: black;
+    font-weight: 200;
+    font-family: serif;
+    margin-left: 15%;
+    width: 100%;
+}
+
+.row h3 {
+    color: #568fac;
+    margin-left: auto;
+
+}
+
+.row {
+    margin-left: 5%;
+
+}
+
+.head h3 {
+    color: #568fac;
+    margin-left: auto;
+}
+
+.head {
+    margin-left: 5%;
+}
+
+.copy h3 {
+    color: #568fac;
+    margin-left: auto;
+
+}
+
+.copy {
+    margin-left: 5%;
+
+}
+
+.container h1 {
+    font-weight: 300;
+    line-height: 150%;
+    text-align: center;
+    margin: 0;
+}
+
+.contactForm {
+    grid-column-gap: 2%;
+    padding: 2%;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    text-align: left;
+}
+
+
+section {
+    /* background-color: black; */
+    text-align: center;
+    font-family: "Roboto mono";
+}
+
+.Trdmain {
+    margin-top: 20px;
+}
+
+.main2f_div {
+    margin-top: 20px;
+}
+
+.main2f_div h2 {
+    color: rgb(123, 123, 123);
+}
+
+.Trdmain h2 {
+    color: rgb(117, 116, 116);
+    font-weight: 100;
+}
+
+.map-container img {
+    width: 100%;
+}
+
+.get-in-touch-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 2% 5%;
+}
+
+.get-in-touch-contacts {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.get-in-touch-contacts h1 {
+    text-align: center;
+    margin: 10px;
+    color: #00000080;
+}
+
+.get-in-touch-contacts-info-container {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    margin-top: 10%;
+}
+
+.get-in-touch-contacts-info-container img {
+    width: 32px;
+}
+
+.get-in-touch-contacts-info-container h3 {
+    color: #005590;
+}
+
+.get-in-touch-contacts-info-container p {
+    text-align: left;
+}
+
+.form-button {
+    width: 25%;
+    display: block;
+    margin: 0 auto;
+}
+
+.select-services {
+    color: #707070;
+}
+
+@media only screen and (max-width : 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger img {
+        height: 32px;
+        width: 32px;
+    }
+
+    .mobileLinks {
+        flex-direction: column;
+        height: 90vh;
+        font-family: 'Patrick Hand', cursive;
+        font-size: 1.2em;
+    }
+
+    .mobileLinks div {
+        font-size: larger;
+        width: 50vw;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .mobileLinks div:hover {
+        color: #005590;
+        cursor: pointer;
+    }
+
+    .banner {
+        height: 500px;
+    }
+
+    .flexRow {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .whyUs {
+        flex: auto;
+    
+    }
+    .whyUs p{
+        text-align: left;
+    }
+
+    .homepageServices {
+        padding: .5rem;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+
+    .testimonialText {
+        width: 90%;
+    }
+
+    .full-Width-P {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .our-service {
+        width: 100%;
+    }
+
+    .our-service>img {
+        width: 192px;
+        height: 192px;
+        margin: 2rem 5rem 2rem 5rem;
+    }
+
+    .flexRow-reverse {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    table {
+        width: 90%;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+    }
+
+    th {
+        font-size: 1.1rem;
+    }
+
+    td {
+        font-size: 1rem;
+        padding-top: 1.05rem;
+        padding-bottom: 1.05rem;
+    }
+
+    .get-in-touch-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 2% 5%;
+    }
+    
+    .get-in-touch-contacts-info-container {
+        display: grid;
+        grid-template-columns: 2fr 10fr;
+        margin-top: 10%;
+        text-align: left;
+    }
+
+    .form-button {
+        width: 100%;
+    }
+}
